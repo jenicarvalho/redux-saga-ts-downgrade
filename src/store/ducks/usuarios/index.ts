@@ -2,7 +2,7 @@ import { Reducer } from "redux"
 import { UsersTypes } from "./types"
 
 const INITIAL_STATE: any = {
-  arrayDeUsuarios: [],
+  objetoUsuario: {},
   loading: false
 }
 
@@ -16,7 +16,7 @@ const reducer: Reducer = (state = INITIAL_STATE, action) => {
     case UsersTypes.GET_USERS_SUCCESS:
       return { 
         ...state, 
-        arrayDeUsuarios: action.payload,
+        objetoUsuario: action.payload,
         loading: false
       } 
     case UsersTypes.GET_USERS_FAILURE:

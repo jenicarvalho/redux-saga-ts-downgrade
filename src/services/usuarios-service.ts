@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const UsuariosService = {
-  getUsuarios: () => axios.get('https://jsonplaceholder.typicode.com/users')
+  getUsuarios: (user: any) => axios.get(`https://jsonplaceholder.typicode.com/users/${user}`)
 }
 
 export default UsuariosService
